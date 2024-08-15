@@ -4,5 +4,5 @@ metadata:
   name: app-config
   namespace: fullstack-app
 data:
-  MONGO_URI: mongodb://mongo-db:27017/ToDoAppDb
+  MONGO_URI: mongodb://mongo:27017/ToDoAppDb
   NODE_ENV: production
