@@ -5,10 +5,6 @@ yarn-error.log
 package-lock.json
 yarn.lock
 
-# Kubernetes
-*.yaml
-*.yml
-
 # Kubernetes Deployments
 /deployments/
 

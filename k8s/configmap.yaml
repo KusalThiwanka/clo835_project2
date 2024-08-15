@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: fullstack-app
+data:
+  MONGO_URI: mongodb://mongo-db:27017/ToDoAppDb
+  NODE_ENV: production
