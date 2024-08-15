@@ -32,8 +32,31 @@ Apply the ConfigMap
 Apply the Secret (Include the MongoDB credentials)
 ```kubectl apply -f k8s/secret.yaml```
 
+Deploy MongoDB
+```kubectl apply -f mongo-deployment.yaml```
 
+Deploy Node.js Backend
+```kubectl apply -f backend-deployment.yaml```
 
+Deploy Nginx Frontend
+```kubectl apply -f nginx-deployment.yaml```
 
+## Step 4: Application Management
+
+Scale the deployments if needed
+```kubectl scale --replicas=3 deployment/backend -n fullstack-app```
+```kubectl scale --replicas=3 deployment/frontend -n fullstack-app```
+
+Monitoring
+```kubectl apply -f mongo-deployment.yaml```
+
+Port Forwarding for local Access
+```kubectl port-forward svc/mongo 27017:27017 -n fullstack-app```
+
+Use Mongo shell to interact with your database
+```mongo --host localhost --port 27017 -u <username> -p <password>```
+
+Perform rolling updates
+```kubectl set image deployment/backend backend=your-dockerhub-username/backend-node:new-version -n fullstack-app```
 
 
