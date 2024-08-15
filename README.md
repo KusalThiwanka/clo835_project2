@@ -33,13 +33,13 @@ Apply the Secret (Include the MongoDB credentials)<br>
 ```kubectl apply -f k8s/secret.yaml```<br>
 
 Deploy MongoDB<br>
-```kubectl apply -f mongo-deployment.yaml```<br>
+```kubectl apply -f k8s/mongo-deployment.yaml```<br>
 
 Deploy Node.js Backend<br>
-```kubectl apply -f backend-deployment.yaml```<br>
+```kubectl apply -f k8s/backend-deployment.yaml```<br>
 
 Deploy Nginx Frontend<br>
-```kubectl apply -f nginx-deployment.yaml```<br>
+```kubectl apply -f k8s/nginx-deployment.yaml```<br>
 
 ## Step 4: Application Management
 
