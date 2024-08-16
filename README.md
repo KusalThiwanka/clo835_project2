@@ -58,3 +58,8 @@ Use Mongo shell to interact with your database<br>
 
 Perform rolling updates<br>
 ```kubectl set image deployment/backend backend=your-dockerhub-username/backend-node:new-version -n fullstack-app```<br>
+
+
+## Extra: To Access Database Manually
+Expose the MongoDB service to access it externally, forward a local port to your MongoDB pod
+```kubectl port-forward mongo_pod_name 27017:27017 -n fullstack-app```
