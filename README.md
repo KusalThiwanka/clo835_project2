@@ -51,15 +51,7 @@ Monitoring<br>
 ```kubectl apply -f mongo-deployment.yaml```<br>
 
 Port Forwarding for local Access<br>
-```kubectl port-forward svc/mongo 27017:27017 -n fullstack-app```<br>
-
-Use Mongo shell to interact with your database<br>
-```mongo --host localhost --port 27017 -u <username> -p <password>```<br>
+```kubectl port-forward pod-name 27017:27017 -n fullstack-app```<br>
 
 Perform rolling updates<br>
 ```kubectl set image deployment/backend backend=your-dockerhub-username/backend-node:new-version -n fullstack-app```<br>
-
-
-## Extra: To Access Database Manually
-Expose the MongoDB service to access it externally, forward a local port to your MongoDB pod
-```kubectl port-forward mongo_pod_name 27017:27017 -n fullstack-app```
